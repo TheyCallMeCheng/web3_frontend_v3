@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
-import Job from '../components/Job'
+import Job from '../components/job'
 
 export default function Home({jobs}) {
   
@@ -15,27 +15,19 @@ export default function Home({jobs}) {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.header}>
-            <h1>
-                Header
-            </h1>
-        </div>
-        <div className={styles.jobContainer}>
-            {
-                jobs.data.map((x) => {
-                return(
-                    <Job
-                    key={Math.floor(Math.random() * 20000)}
-                    title={x.title}
-                    company={x.company}
-                    salary={x.salaryRange}
-                    location={x.location}
-                    tags={x.tags}
-                />
-                )
-            })
-            }
-        </div>
+        {
+          jobs.data.map((x) => {
+            return(
+                <Job
+                key={Math.floor(Math.random() * 20000)}
+                title={x.title}
+                company={x.company}
+                salary={x.salaryRange}
+                location={x.location}
+              />
+            )
+          })
+        }
       </main>
 
       <footer className={styles.footer}>

@@ -1,18 +1,10 @@
-import styles from '../styles/Job.module.css'
-
-export default function Job({title, company, salary, location, tags}){
+export default function Job({title, company, salary, location}){
     return (
-        <div className={styles.jobs}>
+        <div className="jobs">
             <h1> {title} </h1>
-            <p> <span>Company:</span> {company} </p>
-            <p> <span>Salary:</span> {salary ? salary : "N/A"} </p>
-            <p> <span>Location:</span> {location ? location : "N/A"} </p>
-            <p> {tags.join(' | ')} </p>
-            <div>
-                <a>
-                   Apply →
-                </a>
-            </div>
+            <p> {company} </p>
+            <p> {salary} </p>
+            <p> {location} </p>
         </div>
     )
 }
