@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
 import Job from '../components/Job'
 
-export default function Home({jobs} : {jobs: Object}) {
+export default function Home({jobs} : {jobs: any}) {
   
   return (
     <div className='md:px-16 px-4'>
@@ -22,7 +22,7 @@ export default function Home({jobs} : {jobs: Object}) {
         </div>
         <div className='min-h-screen py-8 flex-col justify-center'>
             {
-                jobs.data.map((x) => {
+                jobs.data.map((x:any) => {
                 return(
                     <Job
                     key={Math.floor(Math.random() * 20000)}
