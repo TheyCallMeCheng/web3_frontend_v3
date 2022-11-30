@@ -1,6 +1,6 @@
 import styles from '../styles/Job.module.css'
 
-export default function Job({title, company, salary, location, tags}){
+export default function Job({title, company, salary, location, tags} : {title: string; company: string, salary: string, location: string, tags: Array<string>}){
     return (
         <div className='pb-4 text-xl md:flex md:items-center justify-between'>
             <div>

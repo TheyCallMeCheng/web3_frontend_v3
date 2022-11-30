@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
 import Job from '../components/Job'
 
-export default function Home({jobs}) {
+export default function Home({jobs} : {jobs: Object}) {
   
   return (
     <div className='md:px-16 px-4'>
