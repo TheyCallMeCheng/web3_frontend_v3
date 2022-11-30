@@ -55,7 +55,7 @@ export default function Home({jobs} : {jobs: any}) {
 }
 
 export async function getStaticProps() {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/hello`);
+  const response = await fetch(`/api/hello`);
     const data = await response.json(); 
     return {
       props: {
